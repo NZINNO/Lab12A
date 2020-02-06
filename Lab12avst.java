@@ -3,10 +3,10 @@
 //***************************************************************************
 // The "Magpie" AP Lab is created for the College Board APCS
 // curriculum by Laurie White.
-// Leon Schram has altered some of the "Magpie" files to focus on 
+// Leon Schram has altered some of the "Magpie" files to focus on
 // specific CS topics as the "Magpie" Lab is integrated into the curriculum.
 
- 
+
 import java.util.Scanner;
 
 public class Lab12avst
@@ -42,6 +42,7 @@ class MagpieLab12a
 		{
 			response = "Why so negative?";
 		}
+    //Add 10 new responses in a dynamic array for 100 point version
 		else if (statement.indexOf("mother") >= 0
 				|| statement.indexOf("father") >= 0
 				|| statement.indexOf("sister") >= 0
@@ -58,27 +59,13 @@ class MagpieLab12a
 
 	private String getRandomResponse()
 	{
-		final int NUMBER_OF_RESPONSES = 4;
+		final int NUMBER_OF_RESPONSES = 10;
 		double r = Math.random();
 		int whichResponse = (int)(r * NUMBER_OF_RESPONSES);
 		String response = "";
+    //Add a static array with 10 new responses for 80 point version
+    String response[] = {"How are you","I like you","You are a pretty cool dude","Wow that's really cool","Whoa","Did you see that?","What's up","What's going on homie","Sup Homie","What's cooking good looking"};
 
-		if (whichResponse == 0)
-		{
-			response = "Interesting, tell me more.";
-		}
-		else if (whichResponse == 1)
-		{
-			response = "Hmmm.";
-		}
-		else if (whichResponse == 2)
-		{
-			response = "Do you really think so?";
-		}
-		else if (whichResponse == 3)
-		{
-			response = "You don't say.";
-		}
-		return response;
+		public String response {return whichResponse;}
 	}
 }
