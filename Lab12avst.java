@@ -59,13 +59,14 @@ class MagpieLab12a
 
 	private String getRandomResponse()
 	{
-		final int NUMBER_OF_RESPONSES = 10;
+	String responseList[] = {"How are you","I like you","You are a pretty cool dude","Wow that's really cool","Whoa","Did you see that?","What's up","What's going on homie","Sup Homie","What's cooking good looking"};
+		final int NUMBER_OF_RESPONSES = responseList.length;
 		double r = Math.random();
 		int whichResponse = (int)(r * NUMBER_OF_RESPONSES);
 		String response = "";
-    //Add a static array with 10 new responses for 80 point version
-    String response[] = {"How are you","I like you","You are a pretty cool dude","Wow that's really cool","Whoa","Did you see that?","What's up","What's going on homie","Sup Homie","What's cooking good looking"};
 
-		public String response {return whichResponse;}
+		response = responseList[whichResponse];
+		return response;
+
 	}
 }
